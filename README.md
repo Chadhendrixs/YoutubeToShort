@@ -16,5 +16,13 @@ Converts a youtube video (given two timestamps) into a vertical content
 - Choose your justification
 - Generate!
 
+# Demo
+
+https://www.youtube.com/watch?v=oKmM9Vqzlck
+
+# Install tutorial
+
+Hello youtube
+
 # TODO
 - Compile
