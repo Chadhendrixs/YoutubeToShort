@@ -25,4 +25,5 @@ https://www.youtube.com/watch?v=oKmM9Vqzlck
 Hello youtube
 
 # TODO
+- Better comments
 - Compile
