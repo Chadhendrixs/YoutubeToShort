@@ -79,10 +79,10 @@ class PygubuApp:
         path = self.path.get()
         startTime = self.startTime.get()
         endTime = self.endTime.get()
-        if str(self.scaleFlag.state()) == "('selected',)":
-            scaleFlag = True
-        else:
+        if str(self.scaleFlag.state()) == "()":
             scaleFlag = False
+        else:
+            scaleFlag = True
         justification = self.justification.get()
         inputs = [path, startTime, endTime, scaleFlag, justification]
         PygubuApp.main(inputs)
@@ -105,11 +105,10 @@ class PygubuApp:
             'center' : '',
             'right' : ':(iw/2):0'
         }
-        if not scaleFlag:
-            scale = "ih:iw"
-
-        else:
+        if scaleFlag:
             scale = "3414:1920"
+        else:
+            scale = "ih:iw"
         ffmpegCommands = [
             '''ffmpeg -y -i "''' + path + '''" -ss ''' + startTime + ''' -to ''' + endTime + ''' -c:v libx264 -crf 30 cut.mp4''',
             '''ffmpeg -y -i cut.mp4 -vf scale=''' + scale + ''' -preset slow -crf 18 scale.mp4''',
