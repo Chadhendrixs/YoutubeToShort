@@ -22,7 +22,7 @@ https://www.youtube.com/watch?v=oKmM9Vqzlck
 
 # Install tutorial
 
-Hello youtube
+https://www.youtube.com/watch?v=mLpd8mym-io
 
 # TODO
 - Better comments
